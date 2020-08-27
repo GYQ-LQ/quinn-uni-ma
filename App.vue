@@ -1,17 +1,18 @@
 <script>
-	export default {
-		onLaunch: function() {
-			console.log('App Launch')
-		},
-		onShow: function() {
-			console.log('App Show')
-		},
-		onHide: function() {
-			console.log('App Hide')
-		}
-	}
+import Vue from 'vue';
+export default {
+  onLaunch: function () {
+    uni.getSystemInfo({
+      success: function (e) {
+        // #ifdef MP-WEIXIN || MP-QQ
+        Vue.prototype.StatusBar = e.statusBarHeight;
+        // #endif
+      },
+    });
+  },
+};
 </script>
 
 <style>
-	/*每个页面公共css */
+@import './wxcomponents/vant/dist/common/index.wxss';
 </style>

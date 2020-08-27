@@ -1,9 +1,24 @@
 <template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
+  <view style="height: 100%">
+    <div class="navpage" :style="{ paddingTop: StatusBar + 44 + 'px' }">
+      <Home v-if="tabbarInd == 0"></Home>
+      <Report v-if="tabbarInd == 1"></Report>
+      <Order v-if="tabbarInd == 2"></Order>
+      <Mine v-if="tabbarInd == 3"></Mine>
+    </div>
+    <demo-block title="切换标签事件">
+      <van-tabbar
+        :active="tabbarInd"
+        active-color="#07c160"
+        z-index="99"
+        @change="onChange"
+      >
+        <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item icon="search">搜索</van-tabbar-item>
+        <van-tabbar-item icon="friends-o">朋友</van-tabbar-item>
+        <van-tabbar-item icon="setting-o">我的</van-tabbar-item>
+      </van-tabbar>
+    </demo-block>
   </view>
 </template>
 
@@ -11,12 +26,12 @@
 export default {
   data() {
     return {
-      title: 'Hello',
+      StatusBar: this.StatusBar,
+      tabbarInd: 0,
+      title: 'Hello Index',
     };
   },
   onLoad() {
-    console.log(getCurrentPages());
-    console.log(__wxConfig);
     uniCloud
       .callFunction({
         name: 'login',
@@ -26,34 +41,18 @@ export default {
         console.log(res);
       });
   },
-  methods: {},
+  methods: {
+    onChange(e) {
+      this.tabbarInd = e.detail;
+    },
+  },
 };
 </script>
 
 <style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
+.navpage {
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: calc(100upx + env(safe-area-inset-bottom) / 2);
 }
 </style>

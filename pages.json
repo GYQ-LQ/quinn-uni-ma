@@ -1,16 +1,50 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [{
+      "path": "pages/index/index",
+      "stype": {
+        "navigationBarTitleText": "index"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "stype": {
+        "navigationBarTitleText": "mine"
+      }
+    },
+    {
+      "path": "pages/order/order",
+      "stype": {
+        "navigationBarTitleText": "order"
+      }
+    },
+    {
+      "path": "pages/report/report",
+      "stype": {
+        "navigationBarTitleText": "report"
+      }
+    },
+    {
+      "path": "pages/home/home",
+      "stype": {
+        "navigationBarTitleText": "home"
+      }
+    },
+    {
+      "path": "pages/index/quinn/quinn",
+      "stype": {
+        "navigationBarTitleText": "quinn"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "usingComponents": {
+      "van-button": "./wxcomponents/vant/dist/button/index",
+      "van-tabbar": "./wxcomponents/vant/dist/tabbar/index",
+      "van-nav-bar": "./wxcomponents/vant/dist/nav-bar/index",
+      "van-tabbar-item": "./wxcomponents/vant/dist/tabbar-item/index"
+    }
+  }
 }
