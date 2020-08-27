@@ -1,45 +1,72 @@
 {
   "pages": [{
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
       "path": "pages/index/index",
-      "stype": {
+      "style": {
         "navigationBarTitleText": "index"
       }
     },
     {
       "path": "pages/mine/mine",
-      "stype": {
-        "navigationBarTitleText": "mine"
+      "style": {
+        "navigationBarTitleText": "我的"
       }
     },
     {
       "path": "pages/order/order",
-      "stype": {
-        "navigationBarTitleText": "order"
+      "style": {
+        "navigationBarTitleText": "预约"
       }
     },
     {
       "path": "pages/report/report",
-      "stype": {
-        "navigationBarTitleText": "report"
-      }
-    },
-    {
-      "path": "pages/home/home",
-      "stype": {
-        "navigationBarTitleText": "home"
+      "style": {
+        "navigationBarTitleText": "报告"
       }
     },
     {
       "path": "pages/index/quinn/quinn",
-      "stype": {
+      "style": {
         "navigationBarTitleText": "quinn"
       }
     }
   ],
+  "tabBar": {
+    "color": "#dbdbdb",
+    "selectedColor": "#07c160",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "./static/home.png",
+      "selectedIconPath": "./static/home-active.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/report/report",
+      "iconPath": "./static/report.png",
+      "selectedIconPath": "./static/report-active.png",
+      "text": "报告"
+    }, {
+      "pagePath": "pages/order/order",
+      "iconPath": "./static/order.png",
+      "selectedIconPath": "./static/order-active.png",
+      "text": "预约"
+    }, {
+      "pagePath": "pages/mine/mine",
+      "iconPath": "./static/mine.png",
+      "selectedIconPath": "./static/mine-active.png",
+      "text": "我的"
+    }]
+  },
   "globalStyle": {
-    "navigationStyle": "custom",
-    "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "体检预约",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#07c160",
     "usingComponents": {
       "van-button": "./wxcomponents/vant/dist/button/index",
       "van-tabbar": "./wxcomponents/vant/dist/tabbar/index",

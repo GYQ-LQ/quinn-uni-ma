@@ -1,26 +1,28 @@
 <template name="order">
-  <view>
-    <scroll-view scroll-y class="page">
-      <van-nav-bar title="订单" :fixed="true"> </van-nav-bar>
-      <span>order</span>
-    </scroll-view>
-  </view>
+	<scroll-view
+		scroll-y
+		style="background: lightyellow"
+		class="page"
+	>
+		<van-nav-bar
+			title="预约"
+			:fixed="true"
+		> </van-nav-bar>
+		<span>order</span>
+	</scroll-view>
 </template>
 
 <script>
 export default {
-  name: 'order',
-  data() {
-    return {};
-  },
-  onLoad() {
-    console.log('onload');
-  },
+	name: 'order',
+	data() {
+		return {
+			name: 'order',
+		};
+	},
 };
 </script>
 
+
 <style>
-.page {
-  height: 100vh;
-}
 </style>

@@ -1,41 +1,57 @@
-
-<template>
-  <view>quinn</view>
-</template>
+<template name="home">
+	<scroll-view
+		scroll-y
+		style="background: lightblue"
+		class="page"
+	>
+		<van-nav-bar
+			title="quinn"
+			:fixed="true"
+		> </van-nav-bar>
+		<span>quinn</span>
+	</scroll-view>
+</template> 
 
 <script>
 import Vue from "vue";
 export default {
-  data: () => ({}),
-  methods: {},
-  computed: {},
-  watch: {},
-
-  // vue周期函数--初始化执行完毕
-  created() {},
-  // vue周期函数--数据更新后
-  beforeUpdate() {},
-
-  // 小程序周期函数--监听页面加载
-  onLoad(options) {},
-  // 小程序周期函数--监听页面初次渲染完成
-  onReady() {},
-  // 小程序周期函数--监听页面显示
-  onShow() {},
-  // 小程序周期函数--监听页面隐藏
-  onHide() {},
-  // 小程序周期函数--监听页面卸载
-  onUnload() {},
-  // 小程序页面相关事件处理函数--监听用户下拉动作
-  onPullDownRefresh() {},
-  // 小程序页面上拉触底事件的处理函数
-  onReachBottom() {}
-  // 小程序用户点击右上角分享
-  /* onShareAppMessage() {}, */
-  // 小程序页面相关事件处理函数--监听页面滚动
-  /* onPageScroll() {}, */
-  // 小程序页面相关事件处理函数--tab页点击
-  /* onTabItemTap() {} */
+	data: () => ({
+		name: 'quinn'
+	}),
+	methods: {},
+	computed: {},
+	watch: {},
+	beforeCreate() {
+		console.log('beforeCreate from ' + this.name);
+	},
+	created() {
+		console.log('created from ' + this.name)
+	},
+	beforeUpdate() {
+		console.log('beforeUpdate from ' + this.name)
+	},
+	updated() {
+		console.log('updated from ' + this.name);
+	},
+	beforeMount() {
+		console.log('beforeMount from ' + this.name);
+	},
+	mounted() {
+		console.log('mounted from ' + this.name);
+	},
+	beforeDestroy() {
+		console.log('beforeDestroy from ' + this.name);
+	},
+	destroyed() {
+		console.log('destroyed from ' + this.name);
+	},
+	onLoad(options) { console.log('onLoad from ' + this.name) },
+	onReady() { console.log('onReady from ' + this.name) },
+	onShow() { console.log('onShow from ' + this.name) },
+	onHide() { console.log('onHide from ' + this.name) },
+	onUnload() { console.log('onUnload from ' + this.name) },
+	onPullDownRefresh() { console.log('onPullDownRefresh from ' + this.name) },
+	onReachBottom() { console.log('onReachBottom from ' + this.name) },
 };
 </script>
 
