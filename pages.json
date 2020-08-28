@@ -18,7 +18,7 @@
       }
     },
     {
-      "path": "pages/order/order",
+      "path": "pages/appointment/appointment",
       "style": {
         "navigationBarTitleText": "预约"
       }
@@ -34,6 +34,30 @@
       "style": {
         "navigationBarTitleText": "quinn"
       }
+    },
+    {
+      "path": "pages/mine/concat/concat",
+      "style": {
+        "navigationBarTitleText": "联系我们"
+      }
+    },
+    {
+      "path": "pages/mine/introduce/introduce",
+      "style": {
+        "navigationBarTitleText": "中心介绍"
+      }
+    },
+    {
+      "path": "pages/mine/notice/notice",
+      "style": {
+        "navigationBarTitleText": "体检须知"
+      }
+    },
+    {
+      "path": "pages/mine/order/order",
+      "style": {
+        "navigationBarTitleText": "我的体检"
+      }
     }
   ],
   "tabBar": {
@@ -42,26 +66,30 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-      "pagePath": "pages/home/home",
-      "iconPath": "./static/home.png",
-      "selectedIconPath": "./static/home-active.png",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/report/report",
-      "iconPath": "./static/report.png",
-      "selectedIconPath": "./static/report-active.png",
-      "text": "报告"
-    }, {
-      "pagePath": "pages/order/order",
-      "iconPath": "./static/order.png",
-      "selectedIconPath": "./static/order-active.png",
-      "text": "预约"
-    }, {
-      "pagePath": "pages/mine/mine",
-      "iconPath": "./static/mine.png",
-      "selectedIconPath": "./static/mine-active.png",
-      "text": "我的"
-    }]
+        "pagePath": "pages/home/home",
+        "iconPath": "./static/home.png",
+        "selectedIconPath": "./static/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/appointment/appointment",
+        "iconPath": "./static/appointment.png",
+        "selectedIconPath": "./static/appointment-active.png",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "iconPath": "./static/report.png",
+        "selectedIconPath": "./static/report-active.png",
+        "text": "报告"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./static/mine.png",
+        "selectedIconPath": "./static/mine-active.png",
+        "text": "我的"
+      }
+    ]
   },
   "globalStyle": {
     "navigationBarTitleText": "体检预约",
@@ -71,7 +99,9 @@
       "van-button": "./wxcomponents/vant/dist/button/index",
       "van-tabbar": "./wxcomponents/vant/dist/tabbar/index",
       "van-nav-bar": "./wxcomponents/vant/dist/nav-bar/index",
-      "van-tabbar-item": "./wxcomponents/vant/dist/tabbar-item/index"
+      "van-tabbar-item": "./wxcomponents/vant/dist/tabbar-item/index",
+      "van-image": "./wxcomponents/vant/dist/image/index",
+      "van-icon": "./wxcomponents/vant/dist/icon/index"
     }
   }
 }

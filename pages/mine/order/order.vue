@@ -1,15 +1,15 @@
-<template name="report">
+<template name="order">
   <scroll-view scroll-y class="page">
-    <span>report</span>
+    <span>order</span>
   </scroll-view>
 </template>
 
 <script>
 export default {
-  name: 'report',
+  name: 'order',
   data() {
     return {
-      name: 'report',
+      name: 'order',
     };
   },
 };

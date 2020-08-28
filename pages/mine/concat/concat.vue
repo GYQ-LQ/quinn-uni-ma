@@ -1,15 +1,15 @@
-<template name="report">
+<template name="concat">
   <scroll-view scroll-y class="page">
-    <span>report</span>
+    <span>concat</span>
   </scroll-view>
 </template>
 
 <script>
 export default {
-  name: 'report',
+  name: 'concat',
   data() {
     return {
-      name: 'report',
+      name: 'concat',
     };
   },
 };
