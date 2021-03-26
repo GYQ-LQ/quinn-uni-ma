@@ -1,2 +1,2 @@
 # quinn-uni-ma
-uniapp &amp; vant-weapp &amp; 微信小程序
+## 基于uniapp+ vuex + vantUI+ colorUI 的 微信小程序demo项目
